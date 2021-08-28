@@ -21,6 +21,9 @@ public class ButtonPages {
 	@FindBy(how = How.ID, using = "menu_pim_addEmployee")
 	private WebElement btnAddmployee;
 
+	@FindBy(how = How.ID, using = "btnSave")
+	private WebElement btnSave;
+	
 	public ButtonPages(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 		this.questions = new Questions(driver);
@@ -42,6 +45,11 @@ public class ButtonPages {
 		btnAddmployee.click();
 		questions.tiempoSegundos(1);
 		questions.screenShot(driver);
+	}
+	
+	public void btnSave() {
+		btnSave.isDisplayed();
+		btnSave.click();
 	}
 
 }

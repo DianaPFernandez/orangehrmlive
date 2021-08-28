@@ -35,6 +35,7 @@ public class PimPage {
 		txtfirstName.sendKeys(firstName); //sendKeys comando para ingregar la informacion de un campo text
 		txtlastName.sendKeys(lastName);
 		questions.screenShot(driver);
+		buttonPages.btnSave();
 	
 	}
 
